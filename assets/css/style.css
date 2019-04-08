@@ -7,6 +7,16 @@
 	box-sizing: border-box;
 }
 
+.clearfix {
+	overflow: auto;
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
 body {
 	font-family: sans-serif;
 	padding: 5vw;
