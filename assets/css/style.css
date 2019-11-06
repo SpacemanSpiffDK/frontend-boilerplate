@@ -5,16 +5,28 @@
 
 * {
 	box-sizing: border-box;
+	/* NOTHING ELSE GOES IN HERE */
+	/* UNLESS YOU HAVE A REALLY GOOD REASON TO */
 }
 
 .clearfix {
 	overflow: auto;
+	/* avoid using clearfix - use flex instead of float */
 }
 
 .clearfix::after {
 	content: "";
 	clear: both;
 	display: table;
+}
+
+.flex {
+	display: flex;
+	align-content: space-between;
+}
+
+.flex-collapse-left {
+	align-content: unset;
 }
 
 body {
