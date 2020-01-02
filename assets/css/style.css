@@ -21,7 +21,7 @@ body {
 /* test styles */
 
 body {
-	background-color: var(--frappe-color-background);	
+	background-color: var(--frp-color-background);	
 	padding: 0;
 }
 
@@ -29,20 +29,20 @@ body {
 .btn {
 	display: inline-block;
 	text-decoration: none;
-	border-radius: var(--frappe-radius-component-s);
-	background-color: var(--frappe-color-primary);
-	color: var(--frappe-color-on-primary);
-	box-shadow: var(--frappe-shadow);
+	border-radius: var(--frp-radius-component-s);
+	background-color: var(--frp-color-primary);
+	color: var(--frp-color-on-primary);
+	box-shadow: var(--frp-shadow);
 	transition: box-shadow .2s ease-out;
 }
 
 .btn.mwa {
-	background-color: var(--frappe-color-accent);
-	color: var(--frappe-color-on-accent);
+	background-color: var(--frp-color-accent);
+	color: var(--frp-color-on-accent);
 }
 
 .btn:active {
-	box-shadow: var(--frappe-shadow-depressed);
+	box-shadow: var(--frp-shadow-depressed);
 }
 
 @media (min-width: 641px){
@@ -58,10 +58,10 @@ body {
 
 	.flex > div {
 		width: 100%;
-		margin-bottom: var(--frappe-density-m);
+		margin-bottom: var(--frp-density-m);
 	}
 }
 
 h1, p {
-	margin-bottom: var(--frappe-density-m);
+	margin-bottom: var(--frp-density-m);
 }
