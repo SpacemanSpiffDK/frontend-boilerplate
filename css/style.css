@@ -1,0 +1,92 @@
+:root {
+	/* max content width */
+	--site-width: 1200px;
+
+	/* density variables */
+	--spacer-x1: 1rem; /* change spacer value to change density in the layout */
+	--spacer-x025: calc(var(--spacer-x1) * .25);
+	--spacer-x05: calc(var(--spacer-x1) * .5);
+	--spacer-x075: calc(var(--spacer-x1) * .75);
+	--spacer-x2: calc(var(--spacer-x1) * 2);
+	--spacer-x3: calc(var(--spacer-x1) * 3);
+	--spacer-x4: calc(var(--spacer-x1) * 4);
+	--spacer-x6: calc(var(--spacer-x1) * 6);
+	--spacer-x8: calc(var(--spacer-x1) * 8);
+	--spacer-x12: calc(var(--spacer-x1) * 12);
+	--spacer-x16: calc(var(--spacer-x1) * 16);
+	--spacer-x32: calc(var(--spacer-x1) * 32);
+
+	/* color variables */
+	--color-text: #11111e;
+	--color-text-accent: #4444cc;
+
+	--color-primary: #ffffff;
+	--color-on-primary: #130f40;
+	--color-secondary: #88ffcc;
+	--color-on-secondary: #130f40;
+	
+	/* component radius variables */
+	--radius: var(var(--spacer-x05));
+
+	/* shadow  */
+	--shadow: 3px 3px 5px 0 rgba(0,0,0,.5);
+	--shadow-depressed: 0 0 5px 0 rgba(0,0,0,.5);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+	/* change font size here to change the size in general */
+}
+
+body {
+	font-family: sans-serif;
+	line-height: 1.4;
+	font-size: 1rem;
+}
+
+h1 {
+	font-size: 3rem;
+}
+h2 {
+	font-size: 2.6rem;
+}
+h3 {
+	font-size: 2.2rem;
+}
+
+.site-width {
+	margin: 0 auto;
+	max-width: var(--site-width);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="date"],
+input[type="date"],
+input[type="submit"],
+textarea {
+	-webkit-appearance: none;
+	appearance: none;
+	font-size: 1rem;
+
+}
+
+@media (max-width: 1024px) {
+	html {
+		font-size: 14px;
+		/* this adjusts all font sizes that are using rem to be slighty smaller than normal */
+	}
+}
+
+@media (max-width: 800px) {
+	html {
+		font-size: 2.5vw;
+		/* this fluidly adjusts all font sizes that are using rem to scale based on viewport width */
+	}
+}

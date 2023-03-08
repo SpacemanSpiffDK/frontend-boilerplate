@@ -1,1 +1,0 @@
-// JS by Dan Høegh
