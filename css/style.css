@@ -24,9 +24,11 @@
 	--color-on-primary: #130f40;
 	--color-secondary: #88ffcc;
 	--color-on-secondary: #130f40;
+
+	--form-border-color: #cccccc;
 	
 	/* component radius variables */
-	--radius: var(var(--spacer-x05));
+	--radius: var(--spacer-x05);
 
 	/* shadow  */
 	--shadow: 3px 3px 5px 0 rgba(0,0,0,.5);
@@ -58,11 +60,6 @@ h3 {
 	font-size: 2.2rem;
 }
 
-.site-width {
-	margin: 0 auto;
-	max-width: var(--site-width);
-}
-
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -70,11 +67,91 @@ input[type="search"],
 input[type="date"],
 input[type="date"],
 input[type="submit"],
+.btn,
 textarea {
+	border: 1px solid var(--form-border-color);
+	background-color: white;
+	padding: var(--spacer-x05) var(--spacer-x1);
 	-webkit-appearance: none;
 	appearance: none;
 	font-size: 1rem;
+	border-radius: var(--radius);
+}
 
+.btn,
+input[type="submit"] {
+	background-color: #333333;
+	color: #ffffff;
+	text-decoration: none;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.site-width {
+	margin: 0 auto;
+	max-width: var(--site-width);
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-left {
+    display: flex;
+    justify-content: left;
+}
+
+.flex-right {
+    display: flex;
+    justify-content: right;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
+.flex-column-reverse {
+	flex-direction: column-reverse;
+}
+
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-space-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-gap-x2 {
+    gap: var(--spacer-x2);
+}
+
+.flex-gap-x1 {
+    gap: var(--spacer-x1);
+}
+
+.flex-gap-x05 {
+    gap: var(--spacer-x05);
+}
+
+.flex-gap-x4 {
+    gap: var(--spacer-x4);
+}
+
+.flex-even > * {
+    flex: 1;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
 }
 
 @media (max-width: 1024px) {
