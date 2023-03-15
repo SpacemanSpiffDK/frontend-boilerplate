@@ -154,6 +154,11 @@ input[type="submit"] {
     top: 0;
 }
 
+#nav-open,
+#nav-close {
+	display: none;
+}
+
 @media (max-width: 1024px) {
 	html {
 		font-size: 14px;
@@ -161,9 +166,79 @@ input[type="submit"] {
 	}
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
 	html {
 		font-size: 2.5vw;
 		/* this fluidly adjusts all font sizes that are using rem to scale based on viewport width */
 	}
+
+	body {
+		position: relative;
+		padding: 0;
+		margin: 0;
+	}
+
+	#main-nav {
+		background-color: #888;
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		top: 0;
+		transform: translateX(-100%);
+		transition: transform .2s ease-in;
+	}
+
+	.menu-active #main-nav {
+		transform: translateX(0);
+	}
+
+	#nav-open,
+	#nav-close {
+		display: block;
+	}
+
+	#main-nav > ul {
+		flex-direction: column;
+	}
+}
+
+#main-nav ul {
+	margin: 0;
+	list-style-type: none;
+	padding: 0;
+}
+
+#main-nav > ul {
+	display: flex;
+	background-color: #ccc;
+}
+
+#main-nav > ul > li {
+	position: relative;
+}
+
+#main-nav > ul > li > ul {
+	position: absolute;
+	background-color: #ddd;
+}
+
+.touch #main-nav > ul > li.active > ul,
+.no-touch #main-nav > ul > li:hover > ul {
+	display: block;
+}
+
+#main-nav > ul ul {
+	display: none;
+}
+
+#main-nav a {
+	padding: var(--spacer-x1) var(--spacer-x2);
+	text-decoration: none;	
+	display: block;
+	white-space: nowrap;
+}
+
+#main-nav a:hover,
+#main-nav a.active {
+	background-color: #aaa;
 }
