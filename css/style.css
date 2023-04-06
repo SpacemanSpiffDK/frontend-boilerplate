@@ -53,6 +53,10 @@ body {
 	font-size: 1rem;
 }
 
+header {
+	z-index: 10;
+}
+
 .hero {
 	position: relative;
 	background-color: red;
@@ -253,6 +257,47 @@ input[type="submit"] {
 	}
 }
 
+#main-nav ul {
+	margin: 0;
+	list-style-type: none;
+	padding: 0;
+}
+
+#main-nav > ul {
+	display: flex;
+	background-color: #ccc;
+}
+
+#main-nav > ul > li {
+	position: relative;
+}
+
+#main-nav > ul > li > ul {
+	position: absolute;
+	background-color: #ddd;
+}
+
+.touch #main-nav > ul > li.active > ul,
+.no-touch #main-nav > ul > li:hover > ul {
+	display: block;
+}
+
+#main-nav > ul ul {
+	display: none;
+}
+
+#main-nav a {
+	padding: var(--spacer-x1) var(--spacer-x2);
+	text-decoration: none;	
+	display: block;
+	white-space: nowrap;
+}
+
+#main-nav a:hover,
+#main-nav a.active {
+	background-color: #aaa;
+}
+
 @media (max-width: 1000px) {
 	html {
 		font-size: 2.5vw;
@@ -287,55 +332,15 @@ input[type="submit"] {
 	#main-nav > ul {
 		flex-direction: column;
 	}
-}
-
-#main-nav ul {
-	margin: 0;
-	list-style-type: none;
-	padding: 0;
-}
-
-#main-nav > ul {
-	display: flex;
-	background-color: #ccc;
-}
-
-#main-nav > ul > li {
-	position: relative;
-}
-
-#main-nav > ul > li > ul {
-	position: absolute;
-	background-color: #ddd;
-}
-
-.touch #main-nav > ul > li > ul {
-	position: initial;
-}
-
-.touch #main-nav > ul > li.active > ul,
-.no-touch #main-nav > ul > li:hover > ul {
-	display: block;
-}
-
-#main-nav > ul ul {
-	display: none;
-}
-
-#main-nav a {
-	padding: var(--spacer-x1) var(--spacer-x2);
-	text-decoration: none;	
-	display: block;
-	white-space: nowrap;
-}
-
-#main-nav a:hover,
-#main-nav a.active {
-	background-color: #aaa;
+	
+	#main-nav > ul > li > ul {
+		position: relative;
+	}
 }
 
 
 
+/* set max-width to site-width + what you thing is reasonable */
 @media (max-width: 1300px)
 {
 	.section {
