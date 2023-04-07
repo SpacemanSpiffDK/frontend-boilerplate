@@ -1,4 +1,4 @@
-Basic HTML/CSS/JS for a respopnsive website
+Basic HTML/CSS/JS for a responsive website
 
 Folders "css" and "script" named according to Umbraco 11 conventions.
 
