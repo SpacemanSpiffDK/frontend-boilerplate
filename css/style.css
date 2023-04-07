@@ -25,6 +25,8 @@
 	--color-secondary: #88ffcc;
 	--color-on-secondary: #130f40;
 
+	--color-nav: #000;
+
 	--section: transparent;
 	--section-dark: #eee;
 
@@ -55,6 +57,20 @@ body {
 
 header {
 	z-index: 10;
+}
+
+a, 
+a:hover,
+a:active,
+a:visited {
+	color: var(--color-text);
+}
+
+nav a, 
+nav a:hover,
+nav a:active,
+nav a:visited {
+	color: var(--color-text);
 }
 
 .hero {
