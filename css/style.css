@@ -323,7 +323,7 @@ input[type="submit"] {
 }
 
 .touch #main-nav>ul>li.active>ul,
-.no-touch #main-nav>ul>li:hover>ul {
+.no-touch #main-nav>ul>li.visible>ul {
 	display: block;
 }
 
@@ -338,7 +338,7 @@ input[type="submit"] {
 	white-space: nowrap;
 }
 
-#main-nav ul a:hover,
+#main-nav ul a.visible,
 #main-nav ul a.active {
 	background-color: #aaa;
 }
