@@ -391,12 +391,19 @@ input[type="submit"] {
 	}
 }
 
-
-
 /* set max-width to site-width + what you thing is reasonable */
 @media (max-width: 1300px) {
 	.section {
 		padding-left: var(--spacer-x1);
 		padding-right: var(--spacer-x1);
 	}
+}
+
+
+/* accordion stuff if you need it */
+
+.accordion-content {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height .2s ease-in-out;
 }

@@ -1,3 +1,7 @@
+
+// init body elm
+const elmBody = document.querySelector('body');
+
 const dp = {
     mobileNav: (show) => {
         const elmHtml = document.querySelector('html');
@@ -73,7 +77,6 @@ dp.init();
 
 
 /* hover intent */
-
 var dropDown = document.querySelectorAll('.menu-item');
 var instance = new SV.HoverIntent(dropDown, {
     onEnter: function(targetItem) {
@@ -84,4 +87,31 @@ var instance = new SV.HoverIntent(dropDown, {
       // call on mouseleave after timeout
       targetItem.classList.remove('visible');
     },
+});
+
+/* scroll event triggers */
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+        elmBody.classList.add('scrolled');
+        alreadyScrolled = true;
+    } else {
+        elmBody.classList.remove('scrolled');
+        alreadyScrolled = false;
+    }
+});
+
+/* accordions */
+const accordionHeader = document.querySelectorAll('.accordion .header');
+
+accordionHeader.forEach(header => {
+    header.addEventListener('click', (e) => {
+        e.target.parentElement.classList.toggle('active');
+        console.log(e.target.nextElementSibling);
+        const accordionContent = e.target.nextElementSibling;
+        if (accordionContent.style.maxHeight) {
+            accordionContent.style.maxHeight = null;
+        } else {
+            accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+        }
+    });
 });
