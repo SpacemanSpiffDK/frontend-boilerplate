@@ -3,12 +3,28 @@
 const elmBody = document.querySelector('body');
 
 const code = {
-    mobileNav: (show) => {
-        const elmHtml = document.querySelector('html');
-        if (show) {
-            elmHtml.classList.add('menu-active');
-        } else {
-            elmHtml.classList.remove('menu-active');
+    mobileNav: {
+        show: (show) => {
+            const elmHtml = document.querySelector('html');
+            if (show) {
+                elmHtml.classList.add('menu-active');
+            } else {
+                elmHtml.classList.remove('menu-active');
+            }
+        },
+        init: () => {
+            // set close button
+            document.querySelector("#nav-close-btn").addEventListener("click", (event) => {
+                event.preventDefault();
+                code.mobileNav.show(false);
+            });
+
+            // set open button
+            document.querySelector("#nav-open-btn").addEventListener("click", (event) => {
+                event.preventDefault();
+                code.mobileNav.show(true);
+            });
+
         }
     },
     touch: {
@@ -99,6 +115,8 @@ const code = {
     init: () => {
         // remove .no-js class from html-tag
         document.querySelector('html').classList.remove('no-js');
+
+        code.mobileNav.init();
 
         // startup the touch/no-touch scripts
         code.touch.init();
