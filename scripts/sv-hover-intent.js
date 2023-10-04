@@ -108,3 +108,16 @@ SV.HoverIntent = (function() {
 	};
 
 })();
+
+/* hover intent */
+var dropDown = document.querySelectorAll('.menu-item');
+var instance = new SV.HoverIntent(dropDown, {
+    onEnter: function(targetItem) {
+      // called on mouseenter with intent
+      targetItem.classList.add('visible');
+    },
+    onExit: function(targetItem) {
+      // call on mouseleave after timeout
+      targetItem.classList.remove('visible');
+    },
+});
