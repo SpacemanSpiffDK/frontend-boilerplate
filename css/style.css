@@ -141,6 +141,7 @@ h3,
 h4,
 h5,
 h6 {
+	text-wrap: balance;
 	margin-top: var(--spacer-x2);
 	margin-bottom: var(--spacer-x1);
 }
@@ -175,6 +176,11 @@ h5 {
 
 h6 {
 	font-size: 1.6rem;
+}
+
+p, li, figcaption {
+	text-wrap: pretty;
+	max-width: 65ch;
 }
 
 input[type="text"],
